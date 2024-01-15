@@ -1,0 +1,30 @@
+// Our client 
+.our-clients {
+
+    &__heading {
+        h2 {
+            @include sectionHeading;
+        }
+    }
+
+    .js-our-clients-slider {
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: $sectionHeadingBtmMargin;
+
+            .swiper-slide {
+                // width: 100px !important;
+                text-align: center;
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    filter: grayscale(1);
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

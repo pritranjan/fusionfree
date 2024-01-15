@@ -1,0 +1,115 @@
+footer {
+    background-color: $secondary;
+    padding: 0 0 $footerSpace 0;
+
+    .footer-column {
+        margin-bottom: 3rem;
+        color: $content;
+
+        a {
+            color: $content;
+            text-decoration: none;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        .widget-title {
+            font-size: 14px;
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .textwidget {
+            p {
+                max-width: 30ch;
+            }
+
+            & p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .social-link {
+        margin-top: 2rem;
+    }
+
+    .social-profile {
+        list-style: none;
+        padding-left: 0;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+
+        li {
+            margin-left: 1rem;
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+
+            a {
+                height: 25px;
+                width: 25px;
+                border-radius: 100%;
+                background-color: $content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    color: $bg--dark;
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    background-color: $primary;
+                }
+            }
+
+        }
+    }
+
+    @include media-breakpoint-only(sm) {
+        .footer-column {
+            margin-bottom: 0;
+
+            &.first {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .footer-column {
+            &.last {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .footer-column {
+            .widget-title {
+                margin-bottom: 2rem;
+            }
+        }
+
+    }
+
+    @include media-breakpoint-up(md) {
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            margin-bottom: 0;
+        }
+    }
+}

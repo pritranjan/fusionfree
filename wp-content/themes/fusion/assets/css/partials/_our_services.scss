@@ -1,0 +1,61 @@
+// Our Services
+.our-services {
+    position: relative;
+    text-align: center;
+    color: $content;
+
+    &__heading {
+        h2 {
+            @include sectionHeading;
+        }
+    }
+
+    // Columns Row
+    &__row {
+        .row {
+            gap: 2rem;
+        }
+    }
+
+    &__col {
+        font-size: 14px;
+        // text-align: left;
+
+        h3 {
+            color: $white;
+            font-size: clamp(18px, 3vw, 30px);
+
+            margin-bottom: .75rem;
+        }
+
+        &-img {
+            max-height: 1.25rem;
+            height: 100%;
+            width: auto;
+
+            margin-bottom: 1.5rem;
+        }
+
+        .linkable {
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+
+        // Columns Row
+        &__row {
+            .row {
+                gap: 0;
+            }
+        }
+        &__col {
+            padding: 1.5rem 2rem 0 1.5rem;
+            text-align: left;
+            .linkable {
+                justify-content: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.testimonial-wrapper {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    background-color: $bg--dark;
+
+    .testimonial-card {
+        text-align: center;
+        padding: 0 15px 2rem 15px;
+        max-width: 616.3px;
+        margin: 0 auto;
+
+        .profile-img {
+            height: 75px;
+            width: 75px;
+            margin-bottom: 3rem;
+        }
+
+        .brief {
+            color: $content;
+            margin: 0 auto;
+            font-size: 17px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            line-height: 2;
+
+            i {
+                position: relative;
+                top: -10px;
+                font-size: 6px;
+            }
+        }
+
+        .name {
+            color: $primary;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            &::before,
+            &::after {
+                position: absolute;
+                top: 4px;
+                overflow: hidden;
+                width: 46%;
+                height: 1px;
+                content: '\a0';
+                background-color: $swiperBullet;
+            }
+
+            &::before {
+                margin-left: -50%;
+                text-align: right;
+            }
+
+            &::after {
+                margin-left: 4%;
+            }
+        }
+
+        .designation {
+            color: #fff;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+
+        @include media-breakpoint-up(md) {}
+    }
+}
+
+// Testimonial pagination wrapper 
+.testimonials-pagination-wrapper {
+    .js-testimonials-pagination {
+        position: relative;
+        line-height: 1;
+
+        .swiper-pagination-bullet {
+            width: 30px !important;
+            height: 3px !important;
+            border-radius: 0 !important;
+            background-color: $swiperBullet;
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 1rem) !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $primary;
+        }
+    }
+}

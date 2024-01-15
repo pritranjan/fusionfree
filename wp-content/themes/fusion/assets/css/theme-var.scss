@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+// Font
+$merriWeather: 'Merriweather', serif;
+$openSans: 'Open Sans', sans-serif;
+
+// Variables
+$primary: #FEB960;
+$secondary: #1F1F1F;
+$bg--dark: #171717;
+$bg--footer: #1F1F1F;
+$white: #fff;
+$black: #000;
+$content: #bbbbbb;
+$swiperBullet : #bbbbbb;
+$sectionHeadingBtmMargin:96px;
+$border:#bbbbbb;
+$btn-border-radius :0;
+$footerSpace:96px;
+
+*{
+    font-family: $openSans;
+}
+
+// Over-write the xxl's max width as per design
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,  
+  xxl: 1140px
+);

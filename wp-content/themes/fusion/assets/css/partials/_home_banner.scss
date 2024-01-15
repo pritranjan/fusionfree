@@ -1,0 +1,117 @@
+.fusion {
+    min-height: 100dvh;
+    background: url('../img/bg.jpg')no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color: $white;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    &__content {
+        max-width: 750px;
+        margin: 0 auto;
+
+        h1 {
+            margin-bottom: 3dvh;
+            padding: 2.25rem;
+
+            font-size: clamp(1.75rem, 4vw, 55px);
+            font-weight: 400;
+
+            span {
+                color: $primary;
+                font-family: $merriWeather;
+            }
+
+            border: 1px solid rgba($color: #8f8f8f, $alpha: .5);
+        }
+    }
+
+    &__nav {
+        margin: 0 0 20dvh;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        list-style: none;
+
+        &__item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: .5rem;
+                padding-right: .5rem;
+
+                &::after {
+                    content: '';
+
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 12px;
+                    background-color: $primary;
+                }
+            }
+
+            a {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .scroll-down__btn {
+        img {
+            max-width: 13px;
+            width: 100%;
+        }
+    }
+
+    &__in-touch {
+        position: absolute;
+        bottom: 4dvh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        padding: 0 1rem;
+        max-width: 1140px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            color: $white;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        .fusion__link {
+            img {
+                max-width: 45px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.contact-us {
+    &__heading {
+        h2 {
+            @include sectionHeading;
+        }
+    }
+    padding-bottom: $footerSpace !important;
+
+    form {
+        padding: 1rem;
+        background: $bg--dark;
+
+        .wpcf7-spinner{
+            position: absolute;
+            display: none;
+        }
+        .wpcf7-not-valid-tip {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .wpcf7-response-output {
+            color: $white;
+            margin: 0 !important;
+            margin-top: 1rem !important;
+            text-align: center;
+            border: none !important;
+        }
+        .wpcf7-submit{
+            padding: 17px 55px;
+            img{
+                width: 1em;
+                position: relative;
+                top: -1px;
+            }
+        }
+    }
+
+    .form-wrapper-row {
+        label {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        label:focus {
+            color: red;
+            /* Change to your desired color */
+        }
+
+        .form-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-control {
+            background-color: transparent;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 0;
+            box-shadow: none;
+            color: $white;
+            padding-left: 0;
+            padding-right: 0;
+
+            &:focus {
+                border-color: $primary !important;
+            }
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        &>div {
+            &>p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        form {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem;
+        }
+    }
+}
